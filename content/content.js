@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Checking if script has already been injected
   if (document.getElementsByClassName('papagoExt-icon').length > 0 
     && document.getElementsByClassName('papagoExt-inline').length > 0) return;
+  console.log("0.0.0 - DOMContentLoaded & Script Injected");
 
   // Set default settings if none have been changed by the user yet.
   browser.storage.local.get({
@@ -80,6 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function mouseDown(event) {
+  console.log("Region [0][0] - MouseDown");
   if (icon.contains(event.target) || inline.contains(event.target)) return;
 
   selection = selectedText = selectedLang = null;
@@ -90,6 +92,7 @@ function mouseDown(event) {
 }
 
 function mouseUp(event) {
+  console.log("Region [0][1] - MouseUp");
   draggableDown = false;
   if (icon.contains(event.target) || inline.contains(event.target)) return;
 
@@ -117,6 +120,7 @@ function mouseUp(event) {
 }
 
 function mouseMove(event) {
+  console.log("Region [0][2] - mouseMove");
   if (draggableDown) {
     inline.style.left = (event.clientX + offset.left) + 'px';
     inline.style.top = (event.clientY + offset.top) + 'px';
@@ -124,6 +128,7 @@ function mouseMove(event) {
 }
 
 function keyDown(event) {
+  console.log("Region [0][3] - keyDown");
   if (phraseSelect === 'alt-drag' && event.keyCode === 18) {
     keyPressed = true;
   } else if (phraseSelect === 'ctrl-drag' && event.keyCode === 17) {
@@ -132,6 +137,7 @@ function keyDown(event) {
 }
 
 function keyUp(event) {
+  console.log("Region [0][4] - keyUp");
   if (phraseSelect === 'alt-drag' && event.keyCode === 18) {
     keyPressed = false;
   } else if (phraseSelect === 'ctrl-drag' && event.keyCode === 17) {
@@ -140,12 +146,14 @@ function keyUp(event) {
 }
 
 function selectionChange() {
+  console.log("Region [0][5] - selectionChange");
   if (window.getSelection().toString().length == 0) {
     if (icon.style.display != 'none') hideIcon();
   }
 }
 
 function createIcon() {
+  console.log("Region [0][6] - createIcon");
   let container = document.createElement('div');
   container.className = 'papagoExt-icon';
 
@@ -165,6 +173,7 @@ function createIcon() {
 }
 
 function createInline() {
+  console.log("Region [0][7] - createInline");
   let container = document.createElement('div');
   container.className = 'papagoExt-inline';
 
@@ -215,6 +224,7 @@ function createInline() {
 }
 
 function showIcon(event) {
+  console.log("Region [0][8] - showIcon");
   let rect = selection.getRangeAt(0).getBoundingClientRect();
 
   let offset, top, left;
@@ -241,10 +251,12 @@ function showIcon(event) {
 }
 
 function hideIcon() {
+  console.log("Region [0][9] - hideIcon");
   icon.style.display = 'none';
 }
 
 function showInline() {
+  console.log("Region [0][10] - showInline");
   hideIcon();
 
   setResult();
@@ -275,6 +287,7 @@ function showInline() {
 }
 
 function hideInline() {
+  console.log("Region [0][11] - hideInline");
   inline.style.display = 'none';
 
   let result = document.getElementById('papagoExt-result-text');
@@ -283,6 +296,7 @@ function hideInline() {
 
 // Blur and prevent clicking while showing the loading animation
 function loading(bool) {
+  console.log("Region [0][12.5000] - Loading");
   let blur = document.getElementById('papagoExt-blur');
   let loader = document.getElementById('papagoExt-loader');
 
@@ -296,8 +310,14 @@ function loading(bool) {
 }
 
 function setResult() {
+  console.log("Region [0][12] - setResult");
   let target = document.getElementById('papagoExt-language-target');
   let result = document.getElementById('papagoExt-result-text');
+
+  console.log(`[0][12] - setResult - target = ${target}`)
+  console.log(target)
+  console.log(`[0][12] - setResult - result = ${result}`)
+  console.log(result)
 
   // Check if source languange is known already
   if (selectedLang) {
@@ -344,12 +364,14 @@ function setResult() {
 }
 
 function copyText() {
+  console.log("Region [0][13] - copyText");
   let result = document.getElementById('papagoExt-result-text');
   navigator.clipboard.writeText(result.textContent);
   copied(this);
 }
 
 function copied(copyButton) {  
+  console.log("Region [0][14] - copied");
   let div = document.createElement('div');
   div.textContent = browser.i18n.getMessage('copied');
   div.style = 'position: absolute; overflow: hidden; animation: fade 2s ease-in;';
@@ -362,6 +384,7 @@ function copied(copyButton) {
 
 // Runtime messages to background script
 async function sendTranslate(sourceLang, targetLang, text) {
+  console.log("Region [0][15] - sendTranslate");
   return browser.runtime.sendMessage({
     action: 'translate',
     query: `source=${sourceLang}&target=${targetLang}&text=${text}&honorific=true`
@@ -369,6 +392,8 @@ async function sendTranslate(sourceLang, targetLang, text) {
 }
 
 async function sendDetect(targetLang, text) {
+  console.log("Region [0][16] - sendDetect");
+  console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
   return browser.runtime.sendMessage({
     action: 'detect',
     query: `target=${targetLang}&text=${text}&honorific=true`
@@ -376,10 +401,12 @@ async function sendDetect(targetLang, text) {
 }
 
 function getPageXOffset() {
+  console.log("Region [0][17] - getPageXOffset");
   return window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
 }
 
 function getPageYOffset() {
+  console.log("Region [0][18] - getPageYOffset");
   return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 }
 
