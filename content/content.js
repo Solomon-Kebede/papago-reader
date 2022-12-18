@@ -396,9 +396,18 @@ async function sendDetect(targetLang, text) {
   console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
   return browser.runtime.sendMessage({
     action: 'detect',
-    query: `target=${targetLang}&text=${text}&honorific=true`
+    query: `speaker=${selectedSpeaker}&text=${text}`
   })
 }
+
+// async function sendDetect(targetLang, text) {
+//   console.log("Region [0][16] - sendDetect");
+//   console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
+//   return browser.runtime.sendMessage({
+//     action: 'detect',
+//     query: `target=${targetLang}&text=${text}&honorific=true`
+//   })
+// }
 
 function getPageXOffset() {
   console.log("Region [0][17] - getPageXOffset");
