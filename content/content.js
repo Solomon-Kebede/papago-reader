@@ -319,10 +319,10 @@ function setResult() {
   let target = document.getElementById('papagoExt-language-target');
   let result = document.getElementById('papagoExt-result-text');
 
-  console.log(`[0][12] - setResult - target = ${target}`)
-  console.log(target)
-  console.log(`[0][12] - setResult - result = ${result}`)
-  console.log(result)
+  // console.log(`[0][12] - setResult - target = ${target}`)
+  // console.log(target)
+  // console.log(`[0][12] - setResult - result = ${result}`)
+  // console.log(result)
 
   // Check if source languange is known already
   if (selectedLang) {
@@ -401,7 +401,7 @@ async function sendDetect(selectedSpeaker, text) {
   // console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
   console.log(`Region [0][16] - sendDetect <>>> speaker=${selectedSpeaker}&text=${text}`);
   return browser.runtime.sendMessage({
-    action: 'detect',
+    action: 'read',
     query: `speaker=${selectedSpeaker}&text=${text}`
   })
 }

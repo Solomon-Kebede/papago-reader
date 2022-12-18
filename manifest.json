@@ -54,6 +54,7 @@
   },
   "permissions": [
     "https://papago-extension.herokuapp.com/api/v1/*",
+    "https://s.search.naver.com/*",
     "storage",
     "tabs",
     "contextMenus"

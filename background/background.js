@@ -20,6 +20,11 @@ browser.contextMenus.onClicked.addListener((info, tab) => {
 // Handle translation requests
 browser.runtime.onMessage.addListener((request, sender, sendResponse) => {		
 	switch (request.action) {
+		case 'read':
+			read(request)
+				.then(body => sendResponse(body))
+				.catch(err => sendResponse(err));
+			return true;
 		case 'detect':
 			detect(request)
 				.then(body => sendResponse(body))
@@ -58,7 +63,7 @@ async function call2(url) {
 		return error;
 	}
 
-	return await console.log(response);
+	return await response;
 }
 
 function detect(request) {
@@ -69,9 +74,8 @@ function translate(request) {
 	return call("https://papago-extension.herokuapp.com/api/v1/translate?" + request.query)
 }
 
-function reader(request) {
-	return call(`https://s.search.naver.com/p/ldic/search.naver?service=endic&speaker=${selectedSpeaker}&\
-  tts_ssgw_v2=1&where=nx&text=${text}`)
+function read(request) {
+	return call2(`https://s.search.naver.com/p/ldic/search.naver?service=endic&tts_ssgw_v2=1&where=nx&${request.query}`)
 }
 
 function detectPreferredLanguage() {
