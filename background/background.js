@@ -47,12 +47,31 @@ async function call(url) {
 	return await response.json();
 }
 
+async function call2(url) {
+	let response = await fetch(url);
+
+	if (!response.ok) {
+		let error = {
+			message: "Sorry, there was an error.",
+			error: true
+		}
+		return error;
+	}
+
+	return await console.log(response);
+}
+
 function detect(request) {
 	return call("https://papago-extension.herokuapp.com/api/v1/detect?" + request.query);
 }
 
 function translate(request) {
 	return call("https://papago-extension.herokuapp.com/api/v1/translate?" + request.query)
+}
+
+function reader(request) {
+	return call(`https://s.search.naver.com/p/ldic/search.naver?service=endic&speaker=${selectedSpeaker}&\
+  tts_ssgw_v2=1&where=nx&text=${text}`)
 }
 
 function detectPreferredLanguage() {
