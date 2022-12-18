@@ -396,9 +396,10 @@ async function sendTranslate(sourceLang, targetLang, text) {
   })
 }
 
-async function sendDetect(targetLang, text) {
+async function sendDetect(selectedSpeaker, text) {
   console.log("Region [0][16] - sendDetect");
-  console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
+  // console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
+  console.log(`Region [0][16] - sendDetect <>>> speaker=${selectedSpeaker}&text=${text}`);
   return browser.runtime.sendMessage({
     action: 'detect',
     query: `speaker=${selectedSpeaker}&text=${text}`
