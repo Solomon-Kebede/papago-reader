@@ -1,5 +1,5 @@
 {
-  "author": "Joe Lohmann",
+  "author": "Joe Lohmann, Solomon Kebede",
   "background": {
     "scripts": [
       "lib/browser-polyfill.min.js",
@@ -18,7 +18,7 @@
       "19": "icons/19.png",
       "16": "icons/16.png"
     },
-    "default_title": "Papago Translator",
+    "default_title": "Papago Reader",
     "default_popup": "popup/popup.html"
   },
   "content_scripts": [

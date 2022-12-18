@@ -1,10 +1,10 @@
 {
   "extName": {
-    "message": "Translating with Papago"
+    "message": "Reading with Papago"
   },
 
   "extDescription": {
-    "message": "An extension that utilizes Naver's Papago translation engine."
+    "message": "An extension that utilizes Naver's Papago text-to-speech engine."
   },
 
 	"auto": {
@@ -88,7 +88,7 @@
 	},
 
 	"translate_this_page": {
-		"message": "Translate this Page"
+		"message": "Read this Page"
 	},
 
 	"settings": {
