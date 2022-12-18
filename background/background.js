@@ -80,9 +80,10 @@ function read(request) {
 
 function detectPreferredLanguage() {
 	let browserLang = browser.i18n.getUILanguage().substring(0, 2);
+	browserLang = "clara";
 
 	if (!LANGS.includes(browserLang)) {
-		browserLang = 'en';
+		// browserLang = 'en';
 	}
 
 	browser.storage.local.set({
