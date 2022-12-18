@@ -1,0 +1,127 @@
+Manifest-Version: 1.0
+
+Name: manifest.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 1RAbhZJ2RcseaxCE2QWFRKDmAQM=
+SHA256-Digest: tcZ3m/Jo/iOeoFOuIn7wHjQux+/JwvU571lyxQhMey0=
+
+Name: background/background.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: YK7HYmCGh4DqBP/tdcaY5SunEU8=
+SHA256-Digest: TkqiNYXK8BX5fftFTUOHbSzO14ad5636nXsb4Jmwndo=
+
+Name: content/content.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: coP5PKQHNuq3PxbAxVJkCyMAECc=
+SHA256-Digest: IPyKjqidnV2g/9E5fL+/xJal+jZEX9Wdr8N73mpM9gg=
+
+Name: content/content.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: fBz/hYCYhFRn1wIzu9oghYpNioA=
+SHA256-Digest: 9tiBtL/OTm3nSX1ZGnPQNO04U3AgFZrm4KAg0qHDe+0=
+
+Name: icons/128.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: h9ZAlrfEVw0KuHhIsAfYOrkQwQo=
+SHA256-Digest: N6zvbx76RVQlcJpEFDZR9SXTCvOuWDLNcIV21toDpCM=
+
+Name: icons/16.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: VKR+kWL98TnzDor9faOfndOaKO0=
+SHA256-Digest: vAIHbjDb9X3bc+D9EoJhMY34Xovh+VqxgnXbHG3ZmTw=
+
+Name: icons/19.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: M7zn1RcsbuBjalZ5p4JXmLpPIYE=
+SHA256-Digest: MA3hPvTVZi8NnTVrig3KltYC0vrse8nQLxIiZSz4AQ8=
+
+Name: icons/32.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: MYbV2txYj5Sn9/dBNVZUSVUt1Rw=
+SHA256-Digest: qTQlt3WvioM0YSNlipwHyppLzMhIwLuk5HGKN7OkSJo=
+
+Name: icons/38.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: ORVwNChZELTYtoEzNYfPNxTnHbQ=
+SHA256-Digest: EdsH0IuhOgn3NglDIW4hDo5pXrcXeGeY12dV+5ZVmwU=
+
+Name: icons/48.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: z3nDuXydxzxKyZgrHO79VVt3vy8=
+SHA256-Digest: rH8mPJDgo1ts/DHR6Vnk2tOOh6pUTSu0hDlaXhQQNzk=
+
+Name: icons/512.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: FA4iMbjN8PQ5HtHOYN2A2356UcI=
+SHA256-Digest: QO3erejgRSAKkk63LPKI5Z2FehBon9DUA7G+duG4f1Y=
+
+Name: icons/64.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: eYGbQ8Be+6x+HzQWaaFVfwv7HdE=
+SHA256-Digest: rmVk1dfWhzYBoyO7kG7H9KFm1JUybY3su3GzMZEupew=
+
+Name: icons/logo.png
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: zGRwacW48vTUDHhXKZLXRZWvZgA=
+SHA256-Digest: NrLOPS2n0ouC3RsOTLeSwWe5tf6w8nRNI8lcBo6ZH0M=
+
+Name: lib/browser-polyfill.min.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: u/hCMBpmGLC9RuJO2m9Ppv/B8cI=
+SHA256-Digest: ogk4EN+OADk+5NOtwkPqgtflZHG0Dw9mtk+JgNqUQJQ=
+
+Name: _locales/en/messages.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: TG7tyVn4kaHA5uxjogwfSnnNLyY=
+SHA256-Digest: PPr6IsjoZOdZyWtMuH3w28EV2dVun7T1wWHL7vmof/o=
+
+Name: _locales/es/messages.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: F2bCL5Bk49vAoHsX2gFNYYd9nNk=
+SHA256-Digest: Qr5KnWvHOaE44XAdSGb4DcCZnrHJP2iKL3vxmbga4d0=
+
+Name: _locales/ko/messages.json
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: Mo8IAvSsSthWAyEB5iZhhWyQHWk=
+SHA256-Digest: ybX2QxOL2yFVvVxgiQQPqaBmhsgm3wRvFwmGBQiSjOc=
+
+Name: options/options.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: riKnpJF3Fj/C2y1uh+/iEUlrYHw=
+SHA256-Digest: PV1499226ItBZ5kT+f/xFXbWS/JYL1FV9c+DDZvY4eA=
+
+Name: options/options.html
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 8j8QqaM31+wb2mzHMOaIDfIGTuQ=
+SHA256-Digest: SwF7+e9+54xxSLRJBrTI5UntFKzc83WPBmW+FO4sIvo=
+
+Name: options/options.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 6PSPd3YyNY3HZ96LkA5rsEaHiHs=
+SHA256-Digest: ba+NnE6R4IL5VvblPfUj7j3Iw1TsrytpJUAGy6AZ3Bc=
+
+Name: popup/popup.css
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: UkJHf/vbhcMaDvklNDZ8HzbUj1E=
+SHA256-Digest: 8kzTWqNwBjhy4ya2ZPXTNHzMySi0YC+/mbupTdkejkI=
+
+Name: popup/popup.html
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: rsB1ZsJ5Bji8rnT7hn8XtaYkr/0=
+SHA256-Digest: Wlj+mWa2bkJrQfUuxw4ts7+wN/WEJyoCkW6to2hL8SM=
+
+Name: popup/popup.js
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: goIOetpGqtNzwVwXRPfLGN+mtnw=
+SHA256-Digest: VIsZBRta9hHQCoPE98hFXPEb8eYMIKZlbLprQKdpzlk=
+
+Name: META-INF/cose.manifest
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: 3tWIPfFCJ3LVr3BP9EaZcQbMSiE=
+SHA256-Digest: LOKQLrbNVRnPHYNUbYe2/mhr2uhKlpLt3BKEpoJPYBU=
+
+Name: META-INF/cose.sig
+Digest-Algorithms: SHA1 SHA256
+SHA1-Digest: lgnRsRkO6IuyPz352jaTzGS/RyU=
+SHA256-Digest: IpNq2nEipgxSNoARKpmQjGeTL10CANKcpohWjvNSdwQ=
+
