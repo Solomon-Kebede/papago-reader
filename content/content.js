@@ -203,6 +203,11 @@ function createInline() {
   }
 
   // Locales
+  document.getElementById('papagoExt-clara').textContent = browser.i18n.getMessage('clara');
+  document.getElementById('papagoExt-matt').textContent = browser.i18n.getMessage('matt');
+  document.getElementById('papagoExt-djoey').textContent = browser.i18n.getMessage('djoey');
+  document.getElementById('papagoExt-danna').textContent = browser.i18n.getMessage('danna');
+  // Older
   document.getElementById('papagoExt-en').textContent = browser.i18n.getMessage('en');
   document.getElementById('papagoExt-ko').textContent = browser.i18n.getMessage('ko');
   document.getElementById('papagoExt-ja').textContent = browser.i18n.getMessage('ja');
@@ -423,6 +428,11 @@ const contentHTML = `
   <div class="papagoExt-flex-column" id="papagoExt-blur">
     <div class="papagoExt-flex papago-draggable">
       <select name="papagoExt-target" class="papagoExt-bordered" id="papagoExt-language-target">
+        <option id="papagoExt-clara" value="clara">Clara</option>
+        <option id="papagoExt-matt" value="matt">Matt</option>
+        <option id="papagoExt-djoey" value="djoey">D.Joey</option>
+        <option id="papagoExt-danna" value="danna">Danna</option>
+        <!-- -->
         <option id="papagoExt-en" value="en">English</option>
         <option id="papagoExt-ko" value="ko">Korean</option>
         <option id="papagoExt-ja" value="ja">Japanese</option>
