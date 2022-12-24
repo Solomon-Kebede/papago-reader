@@ -207,20 +207,6 @@ function createInline() {
   document.getElementById('papagoExt-matt').textContent = browser.i18n.getMessage('matt');
   document.getElementById('papagoExt-djoey').textContent = browser.i18n.getMessage('djoey');
   document.getElementById('papagoExt-danna').textContent = browser.i18n.getMessage('danna');
-  // Older
-  document.getElementById('papagoExt-en').textContent = browser.i18n.getMessage('en');
-  document.getElementById('papagoExt-ko').textContent = browser.i18n.getMessage('ko');
-  document.getElementById('papagoExt-ja').textContent = browser.i18n.getMessage('ja');
-  document.getElementById('papagoExt-zh-CN').textContent = browser.i18n.getMessage('zh_CN');
-  document.getElementById('papagoExt-zh-TW').textContent = browser.i18n.getMessage('zh_TW');
-  document.getElementById('papagoExt-vi').textContent = browser.i18n.getMessage('vi');
-  document.getElementById('papagoExt-id').textContent = browser.i18n.getMessage('id');
-  document.getElementById('papagoExt-th').textContent = browser.i18n.getMessage('th');
-  document.getElementById('papagoExt-de').textContent = browser.i18n.getMessage('de');
-  document.getElementById('papagoExt-ru').textContent = browser.i18n.getMessage('ru');
-  document.getElementById('papagoExt-es').textContent = browser.i18n.getMessage('es');
-  document.getElementById('papagoExt-it').textContent = browser.i18n.getMessage('it');
-  document.getElementById('papagoExt-fr').textContent = browser.i18n.getMessage('fr');
 
   copyButton.textContent = browser.i18n.getMessage('copy');
   document.getElementById('papagoExt-donate').textContent = browser.i18n.getMessage('donate');
@@ -438,20 +424,6 @@ const contentHTML = `
         <option id="papagoExt-matt" value="matt">Matt</option>
         <option id="papagoExt-djoey" value="djoey">D.Joey</option>
         <option id="papagoExt-danna" value="danna">Danna</option>
-        <!-- -->
-        <option id="papagoExt-en" value="en">English</option>
-        <option id="papagoExt-ko" value="ko">Korean</option>
-        <option id="papagoExt-ja" value="ja">Japanese</option>
-        <option id="papagoExt-zh-CN" value="zh-CN">Chinese (Simplified)</option>
-        <option id="papagoExt-zh-TW" value="zh-TW">Chinese (Traditional)</option>
-        <option id="papagoExt-vi" value="vi">Vietnamese</option>
-        <option id="papagoExt-id" value="id">Indonesian</option>
-        <option id="papagoExt-th" value="th">Thai</option>
-        <option id="papagoExt-de" value="de">German</option>
-        <option id="papagoExt-ru" value="ru">Russian</option>
-        <option id="papagoExt-es" value="es">Spanish</option>
-        <option id="papagoExt-it" value="it">Italian</option>
-        <option id="papagoExt-fr" value="fr">French</option>
       </select>
       <div class="papagoExt-bordered" id="papagoExt-copy-button">Copy</div>
     </div>
