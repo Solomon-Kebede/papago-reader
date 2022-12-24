@@ -172,6 +172,14 @@ function createIcon() {
   return container;
 }
 
+function requestQuery(text, selectedSpeaker="clara") {
+  // console.log(text);
+  endPoint1 = `https://s.search.naver.com/p/ldic/search.naver?service=endic&speaker=${selectedSpeaker}&tts_ssgw_v2=1&where=nx&text=${text}`;
+  audioTag = document.querySelector("#audio-tag");
+  audioTag.attributes.src.value=endPoint1;
+}
+
+
 function createInline() {
   console.log("Region [0][7] - createInline");
   let container = document.createElement('div');
@@ -310,13 +318,20 @@ function setResult() {
   // console.log(`[0][12] - setResult - result = ${result}`)
   // console.log(result)
 
+  // console.log("Sourcing language");
+  // console.log(selectedLang);
+  // loading(true);
+  // console.log("0.Innside");
+  requestQuery(selectedText, target.value)
+  // console.log("1.Outtside");
+  // loading(false);
+  
+  /*
   // Check if source languange is known already
   if (selectedLang) {
     if (selectedLang === target.value) {
       return result.textContent = selectedText;
     }
-
-    loading(true);
 
     sendTranslate(selectedLang, target.value, selectedText)
     .then(response => {
@@ -352,6 +367,7 @@ function setResult() {
       loading(false);
     });
   }
+  */
 }
 
 function copyText() {
@@ -382,7 +398,7 @@ async function sendTranslate(sourceLang, targetLang, text) {
   })
 }
 
-async function sendDetect(selectedSpeaker, text) {
+async function sendRead(selectedSpeaker, text) {
   console.log("Region [0][16] - sendDetect");
   // console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
   console.log(`Region [0][16] - sendDetect <>>> speaker=${selectedSpeaker}&text=${text}`);
@@ -392,14 +408,14 @@ async function sendDetect(selectedSpeaker, text) {
   })
 }
 
-// async function sendDetect(targetLang, text) {
-//   console.log("Region [0][16] - sendDetect");
-//   console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
-//   return browser.runtime.sendMessage({
-//     action: 'detect',
-//     query: `target=${targetLang}&text=${text}&honorific=true`
-//   })
-// }
+async function sendDetect(targetLang, text) {
+  console.log("Region [0][16] - sendDetect");
+  console.log(`Region [0][16] - sendDetect - ${targetLang} => ${text}`);
+  return browser.runtime.sendMessage({
+    action: 'detect',
+    query: `target=${targetLang}&text=${text}&honorific=true`
+  })
+}
 
 function getPageXOffset() {
   console.log("Region [0][17] - getPageXOffset");
