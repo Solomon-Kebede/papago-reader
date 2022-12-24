@@ -1,0 +1,22 @@
+body {
+	background-color: rgba(0,0,0,0.8);
+}
+audio {
+	display: flex;
+	/*width: 100% !important;*/
+	background-color: #338199;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 2px;
+	border-top-left-radius: 7px;
+	/*user-select: none;*/
+	/*-moz-user-focus: normal;*/
+}
+div {
+	display: flex;
+	/*background: white;*/
+	border-radius: 10px;
+	background: #002b48;
+}
+#layer-1 {
+	width: 30%;
+}

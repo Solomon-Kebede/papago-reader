@@ -21,7 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // Checking if script has already been injected
   if (document.getElementsByClassName('papagoExt-icon').length > 0 
     && document.getElementsByClassName('papagoExt-inline').length > 0) return;
-  console.log("0.0.0 - DOMContentLoaded & Script Injected");
+  // console.log("0.0.0 - DOMContentLoaded & Script Injected");
 
   // Set default settings if none have been changed by the user yet.
   browser.storage.local.get({
@@ -81,7 +81,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function mouseDown(event) {
-  console.log("Region [0][0] - MouseDown");
+  // console.log("Region [0][0] - MouseDown");
   if (icon.contains(event.target) || inline.contains(event.target)) return;
 
   selection = selectedText = selectedLang = null;
@@ -92,7 +92,7 @@ function mouseDown(event) {
 }
 
 function mouseUp(event) {
-  console.log("Region [0][1] - MouseUp");
+  // console.log("Region [0][1] - MouseUp");
   draggableDown = false;
   if (icon.contains(event.target) || inline.contains(event.target)) return;
 
@@ -120,7 +120,7 @@ function mouseUp(event) {
 }
 
 function mouseMove(event) {
-  console.log("Region [0][2] - mouseMove");
+  // console.log("Region [0][2] - mouseMove");
   if (draggableDown) {
     inline.style.left = (event.clientX + offset.left) + 'px';
     inline.style.top = (event.clientY + offset.top) + 'px';
@@ -128,7 +128,7 @@ function mouseMove(event) {
 }
 
 function keyDown(event) {
-  console.log("Region [0][3] - keyDown");
+  // console.log("Region [0][3] - keyDown");
   if (phraseSelect === 'alt-drag' && event.keyCode === 18) {
     keyPressed = true;
   } else if (phraseSelect === 'ctrl-drag' && event.keyCode === 17) {
@@ -137,7 +137,7 @@ function keyDown(event) {
 }
 
 function keyUp(event) {
-  console.log("Region [0][4] - keyUp");
+  // console.log("Region [0][4] - keyUp");
   if (phraseSelect === 'alt-drag' && event.keyCode === 18) {
     keyPressed = false;
   } else if (phraseSelect === 'ctrl-drag' && event.keyCode === 17) {
@@ -425,6 +425,11 @@ function getPageYOffset() {
   return window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 }
 
+function playerIcon() {
+  let image = document.createElement('#player-logo');
+  image.style = `background-image: url(${browser.runtime.getURL('icons/19.png')}); height: 50px; width: 50px;`;
+}
+
 const contentHTML = `
   <div class="papagoExt-flex-column" id="papagoExt-blur">
     <div class="papagoExt-flex papago-draggable">
@@ -450,6 +455,18 @@ const contentHTML = `
       </select>
       <div class="papagoExt-bordered" id="papagoExt-copy-button">Copy</div>
     </div>
+    <!-- Inserted Section Start -->
+
+    <div id="layer-1"style="flex-direction: row;display: flex;">
+      <div style="display: flex; border-radius: 10px; background: #002b48;">
+        <img id="player-logo" src="${browser.runtime.getURL('icons/64.png')}" k="./icons/64.png">
+      </div>
+      <div style="display: flex; border-radius: 10px; background: #002b48;">
+        <audio style="display: flex; background-color: #338199; border-top-right-radius: 5px; border-bottom-right-radius: 2px; border-top-left-radius: 7px;" id="audio-tag" src="http://localhost:8008/test1.mp3" autoplay="" controls=""></audio>
+      </div>
+    </div>
+
+    <!-- Inserted Section Stop -->
     <div class="papagoExt-bordered" id="papagoExt-result-text"></div>
     <div class="papagoExt-flex" id="papagoExt-links">
       <span onclick="window.open('https://www.patreon.com/translating_with_papago', '_blank')" id="papagoExt-donate">Support This Extension</span>
