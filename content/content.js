@@ -425,22 +425,22 @@ const contentHTML = `
         <option id="papagoExt-djoey" value="djoey">D.Joey</option>
         <option id="papagoExt-danna" value="danna">Danna</option>
       </select>
-      <div class="papagoExt-bordered" id="papagoExt-copy-button">Copy</div>
+      <div class="papagoExt-bordered" id="papagoExt-copy-button" style="display:none">Copy</div>
     </div>
     <!-- Inserted Section Start -->
 
     <div id="layer-1"style="flex-direction: row;display: flex;">
-      <div style="display: flex; border-radius: 10px; background: #002b48;">
+      <div style="display: flex; /*border-radius: 10px;*/ border-top-left-radius; background: #002b48;  border-bottom-left-radius: 10px; border-top-left-radius: 10px;">
         <img id="player-logo" src="${browser.runtime.getURL('icons/64.png')}" k="./icons/64.png">
       </div>
       <div style="display: flex; border-radius: 10px; background: #002b48;">
-        <audio style="display: flex; background-color: #338199; border-top-right-radius: 5px; border-bottom-right-radius: 2px; border-top-left-radius: 7px;" id="audio-tag" src="http://localhost:8008/test1.mp3" autoplay="" controls=""></audio>
+        <audio style="display: flex; background-color: #338199; border-top-right-radius: 5px; border-bottom-right-radius: 2px; /*border-top-left-radius: 7px;*/" id="audio-tag" src="http://localhost:8008/test1.mp3" autoplay="" controls=""></audio>
       </div>
     </div>
 
     <!-- Inserted Section Stop -->
-    <div class="papagoExt-bordered" id="papagoExt-result-text"></div>
-    <div class="papagoExt-flex" id="papagoExt-links">
+    <div class="papagoExt-bordered" id="papagoExt-result-text" style="display:none"></div>
+    <div class="papagoExt-flex" id="papagoExt-links" style="display:none !important;">
       <span onclick="window.open('https://www.patreon.com/translating_with_papago', '_blank')" id="papagoExt-donate">Support This Extension</span>
     </div>
   </div>
